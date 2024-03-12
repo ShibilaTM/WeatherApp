@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@300&family=Poppins&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+ 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+ .navbar .btn-login{
+    width: 100px;
+    height: 58px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+}
+.navbar .btn-login:hover{
+    background: #f78b34; 
+    color: aliceblue;
+}
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+.nav-menu hr{
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: #ff4141;
+} 
+.nav_logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0; 
+}
+
+.nav_logo img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+
+.nav_logo p {
+    color: #ff4141;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0; /* Remove default margin to avoid spacing issues */
+}
