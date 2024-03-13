@@ -184,7 +184,7 @@ img {
 /*-- Index-Page-Styling --*/
 
 body {
-  background: url("../images/background.jpg");
+  background: url("../images/background2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -194,6 +194,7 @@ body {
   -o-background-size: cover;
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  border-radius: 20px;
 }
 
 body a {
@@ -216,16 +217,17 @@ h1 {
 
 .container {
   width: 65%;
-  height: 80vh;
+  height: 85vh;
   margin: 50px auto;
   background-color: rgba(0, 0, 0, 0.73);
+  border-radius: 20px;
 }
 
 .city {
   width: 60%;
   height: 100%;
   float: left;
-  background: url("../images/city.jpg");
+  background: url("../images/sun.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -234,6 +236,7 @@ h1 {
   min-height: 500px;
   position: relative;
   background-position-x: -30px;
+  border-radius: 20px;
 }
 
 .title {
@@ -288,8 +291,9 @@ div#txt {
 .temperature p {
   font-family: "Raleway", sans-serif;
   font-size: 80px;
-  font-weight: 100;
-  margin: 0 40px;
+  font-weight: 80;
+  margin: 0 62px;
+  color: #eee;
 }
 
 .temperature p span {
@@ -326,14 +330,14 @@ div#txt {
   border-width: thin;
   border-bottom: 1px solid #777;
   color: #eee;
-  font-weight: 600;
+  font-weight: 400;
   text-align: left;
   padding-left: 20px;
 }
 
 .today-weather ul li span {
   float: right;
-  padding-right: 10px;
+  padding-right: 4px;
 }
 
 .today-weather ul li:nth-child(5) {
@@ -579,24 +583,30 @@ div#txt {
 }
 
 @media screen and (max-width: 375px) {
-  h1 {
-    font-size: 26px;
-    line-height: 1.5em;
-    letter-spacing: 0;
-  }
   .city {
-    min-height: 315px;
+    min-height: 400px; /* Increase the min-height to provide more space */
   }
+  
+  .date-time {
+    padding-bottom: 20px; /* Adjust the padding-bottom of date-time */
+    display: flex; /* Use flexbox for better layout control */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+  }
+  
   .dmy {
-    margin-bottom: 30px;
+    margin-bottom: 10px; /* Reduce the margin bottom of the date and time */
   }
+  
   .date {
-    font-size: 18px;
+    font-size: 12px; /* Increase the font size of the date to make it more readable */
   }
+  
   .temperature p {
-    padding-bottom: 15px;
+    padding-bottom: 10px; /* Adjust the padding bottom of the temperature */
   }
 }
+
 
 /*-- //Responsive Code --*/
 .cityHead {
@@ -605,10 +615,11 @@ div#txt {
   justify-content: center;
 }
 .search-box {
+  margin-top: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 2;
 }
@@ -627,16 +638,22 @@ div#txt {
   cursor: pointer;
 }
 .search-box .search-bar {
-  border: none;
-  padding: 10px 11px;
+  border: 1px solid white; 
+  padding: 10px 20px; 
   background: transparent;
   color: white;
-  border-bottom: 1px solid;
   font-size: 16px;
+  border-radius: 20px;  
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
 }
-.search-box .search-bar::placeholder {
-  color: white;
+
+.search-box .search-bar:hover {
+  background-color: white; 
+  color: black !important; 
+  border-color: white; 
 }
+
 .search-bar:focus {
   outline: none;
   border-bottom: 1px solid gray;
@@ -683,3 +700,37 @@ div#txt {
   right: 20px;
   top: 1.5%;
 }
+
+
+
+/* Extra styling */
+
+
+
+/* Enhance backgrounds */
+
+
+.city {
+  background: url("../images/sun.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Adjust layout for different screen sizes */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* Add animations */
+.city {
+  transition: transform 0.3s ease;
+}
+
+.city:hover {
+  transform: scale(1.05);
+}
+
+

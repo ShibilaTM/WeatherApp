@@ -32,6 +32,7 @@ const Forcast = ({ icon, weather: weatherText }) => {
       });
   };
 
+  
   const checkTime = (i) => {
     if (i < 10) {
       i = "0" + i;
@@ -43,26 +44,33 @@ const Forcast = ({ icon, weather: weatherText }) => {
     search("Delhi");
   }, []);
 
+  
   return (
     <div className="forecast">
-      <div className="forecast-icon">
+      {/* <div className="forecast-icon">
         <ReactAnimatedWeather
           icon={icon}
           color={defaults.color}
           size={defaults.size}
           animate={defaults.animate}
         />
-      </div>
+      </div> */}
       <div className="today-weather">
-        <h3>{weatherText}</h3>
+        {/* <h3>{weatherText}</h3> */}
         <div className="search-box">
+      
           <input
             type="text"
             className="search-bar"
             placeholder="Search any city"
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setWeather({});
+              setError("");
+            }}
             value={query}
           />
+
           <div className="img-box">
             <img
               src="https://images.avishkaar.cc/workflow/newhp/search-white.png"
@@ -83,11 +91,15 @@ const Forcast = ({ icon, weather: weatherText }) => {
                 />
               </li>
               <li>
-                Temperature{" "}
-                <span className="temp">
-                  {Math.round(weather.main.temp)}°c ({weather.weather[0].main})
-                </span>
-              </li>
+                  Temperature{" "}
+                  <span className="temp">
+                    {console.log("Weather:", weather)}
+                    {weather && weather.main && weather.main.temp
+                      ? `${Math.round(weather.main.temp)}°C (${weather.weather[0].main})`
+                      : "N/A"}
+                  </span>
+                </li>
+
               <li>
                 Humidity{" "}
                 <span className="temp">

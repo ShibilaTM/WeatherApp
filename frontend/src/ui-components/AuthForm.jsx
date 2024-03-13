@@ -1,16 +1,15 @@
+import React, { useState } from 'react';
 import { Box, Button, Dialog, FormLabel, IconButton, TextField, Typography, useMediaQuery } from '@mui/material';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import React, { useState } from 'react';
-
-const labelStyle = { mt: 1, mb: 1 };
-
-const AuthForm = ({ onSubmit}) => {
+ const labelStyle = { mt: 1, mb: 1 };
+const AuthForm = ({ onSubmit }) => {
     const [isSignup, setIsSignup] = useState(false);
     const [inputs, setInputs] = useState({
         name: "",
         email: "",
         password: ""
     });
+    const [open, setOpen] = useState(true); // State to control the visibility of the dialog
 
     const inputHandler = (e) => {
         setInputs({
@@ -23,14 +22,19 @@ const AuthForm = ({ onSubmit}) => {
         e.preventDefault();
         onSubmit({ inputs, signup: isSignup });
     };
-    
 
     const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
+    const handleClose = () => {
+        setOpen(false); // Set the open state to false to close the dialog
+        window.location.href = 'http://localhost:3000'; // Redirect to localhost:3000
+    };
+    
+
     return (
-        <Dialog PaperProps={{ style: { borderRadius: 20 } }} open={true}>
+        <Dialog PaperProps={{ style: { borderRadius: 20 } }} open={open} onClose={handleClose}>
             <Box sx={{ ml: "auto" }}>
-                <IconButton>
+                <IconButton onClick={handleClose}>
                     <CloseRoundedIcon />
                 </IconButton>
             </Box>
