@@ -13,10 +13,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import './Navbar.css'
-import { styled, alpha } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
-import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
 import logo from '../assets/weather1.png'
 
 

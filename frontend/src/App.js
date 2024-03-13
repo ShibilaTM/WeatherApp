@@ -6,18 +6,20 @@ import Home from './Pages/Home';
 import Weather from './Pages/Weather';
 import './Pages/Weather.css';
 import Navbar from './Elements/Navbar';
+import UserNavbar from './Elements/UserNavbar';
+import UserHome from './Pages/UserHome';
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <div className='container'>
+   
+      
         <Routes>
-          <Route path='/userdashboard' element={<Home />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/userdashboard' element={<Main Children={<UserHome/>}/>} />
           <Route path='/auth' element={<Auth />} />
-          <Route path='/' element={<Weather />} />
         </Routes>
-      </div>
+     
     </div>
   );
 }
