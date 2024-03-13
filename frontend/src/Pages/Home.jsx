@@ -1,9 +1,11 @@
 import React from 'react'
+import Weather, { CurrentLocation } from './Weather'
+import './Weather.css'
 
 const Home = () => {
   return (
-    <div>
-      
+    <div className='container'>
+      <Weather/>
     </div>
   )
 }
