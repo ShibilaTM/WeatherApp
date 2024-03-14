@@ -47,7 +47,7 @@ const UserNavbar = () => {
   </Typography>
   
   
-            {/* Drawer for small screens */}
+           
             <Drawer anchor="left" open={isDrawerOpen} onClose={handleDrawerClose}>
       <List>
     
@@ -67,7 +67,7 @@ const UserNavbar = () => {
   </List>
   </Drawer>
   
-            {/* Buttons for larger screens */}
+          
             <Box className='navbar'
               sx={{
                 display: { xs: 'none', md: 'flex' },

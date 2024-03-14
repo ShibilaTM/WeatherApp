@@ -8,11 +8,11 @@ const WeatherGraph = ({ user }) => {
   const [weatherData, setWeatherData] = useState([]);
 
   useEffect(() => {
-    // Fetch weather data for user's saved location or default location
+    
     if (user && user.location) {
       fetchWeatherData(user.location);
     } else {
-      // Default location if user's location is not available
+      
       fetchWeatherData("Delhi");
     }
   }, [user]);

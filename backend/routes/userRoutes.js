@@ -45,29 +45,6 @@ router.post('/signup',async(req,res,next)=>{
     return res.status(201).json({message:"successfully registered"})
 })
 
-// router.post('/signup', async (req, res, next) => {
-//     const { name, email, password } = req.body;
-
-//     // Validation
-//     if (!name || !email || !password) {
-//         return res.status(422).json({ message: "Invalid inputs" });
-//     }
-
-//     // Hashing password
-//     const hashedPassword = bcrypt.hashSync(password, 10);
-
-//     try {
-//         // Creating and saving user
-//         const user = new userModel({ name, email, password: hashedPassword });
-//         await user.save();
-//         return res.status(201).json({ id:user._id});
-//     } catch (error) {
-//         // Error handling
-//         return next(error);
-//     }
-// });
-
-
 router.put('/update/:id',async(req,res,next)=>{
     const id = req.params.id;
     const {name,email,password} = req.body

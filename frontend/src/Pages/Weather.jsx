@@ -181,10 +181,10 @@ setWeatherData(data);
           <h3>{weatherData.sys.country}</h3>
         </div>
         <div className="mb-icon">
-          {/* You need to set the icon property based on the weather data */}
+       
           
               <ReactAnimatedWeather
-                icon={weatherData.icon} // Update to use weatherData.icon
+                icon={weatherData.icon} 
                 color={defaults.color}
                 size={defaults.size}
                 animate={defaults.animate}

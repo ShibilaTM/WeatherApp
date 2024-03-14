@@ -61,7 +61,7 @@ const Navbar = () => {
   </List>
 </Drawer>
 
-          {/* Buttons for larger screens */}
+          
           <Box className='navbar'
             sx={{
               display: { xs: 'none', md: 'flex' },

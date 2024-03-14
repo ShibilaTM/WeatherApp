@@ -47,16 +47,9 @@ const Forcast = ({ icon, weather: weatherText }) => {
   
   return (
     <div className="forecast">
-      {/* <div className="forecast-icon">
-        <ReactAnimatedWeather
-          icon={icon}
-          color={defaults.color}
-          size={defaults.size}
-          animate={defaults.animate}
-        />
-      </div> */}
+
       <div className="today-weather">
-        {/* <h3>{weatherText}</h3> */}
+      
         <div className="search-box">
       
           <input

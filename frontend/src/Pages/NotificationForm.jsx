@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./NotificationForm.css"; // Import CSS file for styling
+import "./NotificationForm.css"; 
 
 const NotificationForm = () => {
   const [notificationMessage, setNotificationMessage] = useState("");

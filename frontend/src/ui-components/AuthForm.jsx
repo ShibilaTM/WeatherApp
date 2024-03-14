@@ -9,7 +9,7 @@ const AuthForm = ({ onSubmit }) => {
         email: "",
         password: ""
     });
-    const [open, setOpen] = useState(true); // State to control the visibility of the dialog
+    const [open, setOpen] = useState(true); 
 
     const inputHandler = (e) => {
         setInputs({
@@ -26,8 +26,8 @@ const AuthForm = ({ onSubmit }) => {
     const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
     const handleClose = () => {
-        setOpen(false); // Set the open state to false to close the dialog
-        window.location.href = 'http://localhost:3000'; // Redirect to localhost:3000
+        setOpen(false); 
+        window.location.href = 'http://localhost:3000'; 
     };
     
 

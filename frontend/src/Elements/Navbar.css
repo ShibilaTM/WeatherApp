@@ -41,7 +41,7 @@ body{
 }
 
 .nav_logo img {
-    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    max-width: 100%; 
 }
 
 
@@ -49,5 +49,5 @@ body{
     color: #ff4141;
     font-size: 20px;
     font-weight: 500;
-    margin: 0; /* Remove default margin to avoid spacing issues */
+    margin: 0; 
 }

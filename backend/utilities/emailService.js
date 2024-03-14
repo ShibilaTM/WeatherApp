@@ -12,26 +12,23 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const sendConfirmationEmail = async (userEmail, booking) => {
-  const mailOptions = {
-    from: {
-      name: 'Weathe App',
-      address: process.env.ADMIN,
-    },
-    to: [userEmail],
-    subject: 'Weather Update',
-    text: `Today the waeter is `,
-  };
-
+const sendEmail = async (pref, weatherData) => {
   try {
-    await transporter.sendMail(mailOptions);
-    console.log('Email has been sent');
-    
+    const subject = `Weather Update`;
+    const text = `Temperature: ${weatherData.temperature}, Humidity: ${weatherData.humidity},Visibility:${weatherData.visibility},Wind Speed:${weatherData.windSpeed} `; // Modify this to include all relevant weather data
+    await transporter.sendMail({
+      from: process.env.ADMIN,
+      to: pref.emails.join(), 
+      subject: subject,
+      text: text
+    });
+    console.log('Email sent successfully');
   } catch (error) {
-    console.error(error);
+    console.error('Error sending email:', error);
+    throw error; 
   }
 };
 
-module.exports = {
-  sendConfirmationEmail,
-};
+
+module.exports = sendEmail;
+

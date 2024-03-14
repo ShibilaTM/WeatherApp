@@ -14,11 +14,11 @@ const Auth = () => {
       .then((res) => {
         console.log(res);
         if (data.signup) {
-          // Redirect to login page after successful signup
+          
           navigate('/auth');
           window.location.reload(false)
         } else {
-          // Redirect to user dashboard after successful login
+          
           navigate('/userdashboard');
         }
       })
