@@ -52,11 +52,19 @@ const UserNavbar = () => {
       <List>
     
       <ListItem button onClick={handleDrawerClose}>
-        <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
-          Logout
+        <Link to='/notification' style={{ textDecoration: 'none', color: 'black' }}>
+          Services
         </Link>
       </ListItem>
     </List>
+    <List>
+    
+    <ListItem button onClick={handleDrawerClose}>
+      <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+        Logout
+      </Link>
+    </ListItem>
+  </List>
   </Drawer>
   
             {/* Buttons for larger screens */}
@@ -67,7 +75,7 @@ const UserNavbar = () => {
                 alignItems: 'center',
               }}
             >
-              
+               <Button className='btn-login' sx={{ color: 'black' }}><Link to={'/notification'} style={{textDecoration:'none'}}>Services</Link></Button>
               <Button className='btn-login' sx={{ color: 'black' }}><Link to={'/'} style={{textDecoration:'none'}}>Logout</Link></Button>
            
             </Box>

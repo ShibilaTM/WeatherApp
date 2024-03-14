@@ -1,0 +1,67 @@
+.notification-form-container {
+    margin: 100px auto;
+    width: 70%;
+    max-width: 400px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    width: 80%;
+    height: 60vh;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.73);
+    border-radius: 20px;
+  }
+
+
+  .notification-form-container h2 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+    color: red;
+  }
+  
+  .notification-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #050f7e;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #d8dafa;
+    color: black;
+  }
+  

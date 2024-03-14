@@ -13,7 +13,8 @@ app.use(express.urlencoded({extended:true}))
 const userRoutes = require('./routes/userRoutes')
 app.use('/user',userRoutes)
 
-
+const notificationRoutes = require('./routes/NotificationRoutes')
+app.use('/api',notificationRoutes)
 
 
 app.listen(PORT,()=>{
