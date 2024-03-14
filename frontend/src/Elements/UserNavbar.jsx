@@ -52,8 +52,8 @@ const UserNavbar = () => {
       <List>
     
       <ListItem button onClick={handleDrawerClose}>
-        <Link to='/auth' style={{ textDecoration: 'none', color: 'black' }}>
-          Login
+        <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+          Logout
         </Link>
       </ListItem>
     </List>
